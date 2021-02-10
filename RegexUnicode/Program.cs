@@ -11,7 +11,7 @@ namespace RegexUnicode
 			const string content = @"Emails addresses
 * test1@domain.com
 * test2@domain.com";
-			var unicodeContent = new StreamReader(new MemoryStream(Encoding.Unicode.GetBytes(content))).ReadToEnd();
+			var unicodeContent = new StreamReader(new MemoryStream(Encoding.Unicode.GetBytes(content)), Encoding.Unicode).ReadToEnd();
 
 			PrintResults(content, "unencoded input");
 			PrintResults(unicodeContent, "input encoded as unicode");
